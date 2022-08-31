@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.insert.NoteAddUpdateActivity">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til"
+        style="@style/InputLayout"
+        android:hint="@string/name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_name"
+            style="@style/InputText"
+            android:inputType="textCapCharacters"
+            android:maxLength="48"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til2"
+        style="@style/InputLayout"
+        android:hint="@string/barcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_barcode"
+            style="@style/InputText"
+            android:inputType="number"
+            android:maxLength="16"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til3"
+        style="@style/InputLayout.CustomWidth"
+        android:hint="@string/unit"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til2">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_unit"
+            style="@style/InputText"
+            android:inputType="textCapCharacters"
+            android:maxLength="10"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til4"
+        style="@style/InputLayout.CustomWidth"
+        android:hint="@string/stock"
+        app:layout_constraintBottom_toBottomOf="@+id/til3"
+        app:layout_constraintStart_toEndOf="@+id/til3"
+        app:layout_constraintTop_toTopOf="@+id/til3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_stock"
+            style="@style/InputText.Number"
+            android:maxLength="6"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til5"
+        style="@style/InputLayout.CustomWidth"
+        android:hint="@string/buy_price"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til3">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_buy_price"
+            style="@style/InputText.Number"
+            android:maxLength="16"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/til6"
+        style="@style/InputLayout.CustomWidth"
+        android:hint="@string/sell_price"
+        app:layout_constraintBottom_toBottomOf="@+id/til5"
+        app:layout_constraintStart_toEndOf="@+id/til5"
+        app:layout_constraintTop_toTopOf="@+id/til5">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/edt_sell_price"
+            style="@style/InputText.Number"
+            android:maxLength="16"
+            tools:ignore="TextContrastCheck" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/Theme.AndNews.Button"
+        android:text="@string/submit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/til5"
+        tools:ignore="TextContrastCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
